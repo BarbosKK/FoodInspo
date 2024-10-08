@@ -1,25 +1,15 @@
-﻿namespace FoodInspo
+namespace FoodInspo
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+           int count = 0;
 
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+           public MainPage()
+           {
+               InitializeComponent();
+           }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
-    }
-
-}
+           async void OnCounterClicked(System.Object sender, System.EventArgs e)
+           => Application.Current.MainPage = new NavigationPage(new NewPage1());
+           }
+       }

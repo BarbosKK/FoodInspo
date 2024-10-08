@@ -57,10 +57,45 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< HEAD
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+=======
+	  <AndroidResource Remove="Views\**" />
+	  <Compile Remove="Views\**" />
+	  <EmbeddedResource Remove="Views\**" />
+	  <MauiCss Remove="Views\**" />
+	  <MauiXaml Remove="Views\**" />
+	  <None Remove="Views\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\main_page2.png" />
+	  <None Remove="Resources\Images\main_page3.png" />
+	  <None Remove="Resources\Images\main_page4.png" />
+	  <None Remove="Resources\Images\main_page5.png" />
+	  <None Remove="Resources\Images\main_page6.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+>>>>>>> MakiDev
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Hommikusook.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
