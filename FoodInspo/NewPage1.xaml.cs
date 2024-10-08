@@ -24,31 +24,28 @@ public partial class NewPage1 : ContentPage
             // Kontrollime faili nime
             switch (fileImageSource.File)
             {
-                case "main_page.png":
+                case "hommikusook.png":
                     await Navigation.PushAsync(new Hommikusook());
                     break;
 
-                case "main_page1.png":
-                    await Navigation.PushAsync(new Hommikusook());
+                case "lounasook.png":
+                    await Navigation.PushAsync(new Lounasook());
                     break;
-                case "main_page2.png":
+                /*case "main_page2.png":
                     await Navigation.PushAsync(new Hommikusook());
                     break;
                 case "main_page3.png":
-                    await Navigation.PushAsync(new Hommikusook());
+                    await Navigation.PushAsync(new Ohtusook());
                     break;
                 case "main_page4.png":
                     await Navigation.PushAsync(new Hommikusook());
                     break;
                 case "main_page5.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                case "main_page6.png":
-                    await Navigation.PushAsync(new Hommikusook());
+                    await Navigation.PushAsync(new Ohtusook());
                     break;
                 default:
                         DisplayAlert("Nupp", "Suphoe", "OK");
-                        break;
+                        break;*/
                 }
             }
         }

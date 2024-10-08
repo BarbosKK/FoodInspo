@@ -23,7 +23,7 @@
 
             <!-- ESIMENE RIDA -->
             <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
-                <ImageButton Source="main_page.png"
+                <ImageButton Source="hommikusook.png"
                              WidthRequest="100" 
                              HeightRequest="100" 
                              Clicked="OnImageButtonClicked" />
@@ -31,11 +31,11 @@
             </StackLayout>
 
             <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
-                <ImageButton Source="main_page2.png"
+                <ImageButton Source="lounasook.png"
                              WidthRequest="100" 
                              HeightRequest="100" 
                              Clicked="OnImageButtonClicked" />
-                <Label Text="Õhtusöök" HorizontalOptions="Center" />
+                <Label Text="Lounasook" HorizontalOptions="Center" />
             </StackLayout>
 
             <!-- TEINE RIDA-->

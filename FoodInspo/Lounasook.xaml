@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FoodInspo.Hommikusook"
-             Title="Hommikusook">
+             x:Class="FoodInspo.Lounasook"
+             Title="Lounasook">
     <VerticalStackLayout>
-        
+
         <Label 
-            Text="Hommikusöök"
+            Text="Lounasook"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-
-        <Button x:Name="Genereeri"
-Text="Genereeri" 
-HorizontalOptions="Center" />
 
         <Button x:Name="CounterBtn_2"
          Text="Mine tagasi!" 
          SemanticProperties.Hint="Tagasi main page"
-         Clicked="OnCounterClicked_2"
+         Clicked="OnGoBack_Louna"
          HorizontalOptions="Center" />
-        
-        
+
+
     </VerticalStackLayout>
 </ContentPage>
