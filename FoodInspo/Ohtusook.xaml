@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodInspo.Ohtusook"
+             Title="Ohtusook">
+    <VerticalStackLayout>
+
+        <Label 
+            Text="Ohtusöök"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button x:Name="Genereeri"
+Text="Genereeri" 
+HorizontalOptions="Center" />
+
+        <Button x:Name="GoBackBtn"
+         Text="Go Back!" 
+         SemanticProperties.Hint="Tagasi main page"
+         Clicked="OnGoBack_Ohtu"
+         HorizontalOptions="Center" />
+
+
+    </VerticalStackLayout>
+</ContentPage>
