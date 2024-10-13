@@ -41,25 +41,22 @@
 
                 <VerticalStackLayout Spacing="10">
 
-                    <Label 
-                        Text="Hommikusöök"
-                        FontSize="35"
-                        FontAttributes="Bold"
-                        TextColor="#333"
-                        HorizontalOptions="Center" />
+                    <Label x:Name="RecipeTitleLabel"
+                           FontSize="35"
+                           FontAttributes="Bold"
+                           TextColor="#333"
+                           HorizontalOptions="Center" />
 
                     <Label Text="" HeightRequest="20" />
 
-                    <Label 
-                        Text="Valmistusaeg:"
-                        FontSize="25"
-                        FontAttributes="Bold"
-                        TextColor="#333" />
+                    <Label x:Name="PreparationTimeLabel"
+                           FontSize="25"
+                           FontAttributes="Bold"
+                           TextColor="#333" />
 
-                    <Label 
-                        Text="20 minutit"
-                        TextColor="#333"
-                        FontSize="18" />
+                    <Label x:Name="PreparationTimeValueLabel"
+                           FontSize="18"
+                           TextColor="#333" />
 
                     <Label 
                         Text="Koostisosad:"
@@ -67,7 +64,7 @@
                         FontAttributes="Bold"
                         TextColor="#333" />
 
-                    <VerticalStackLayout Spacing="5">
+                    <VerticalStackLayout x:Name="IngredientsList" Spacing="5">
                         <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
                             <CheckBox x:Name="Ingredient1CheckBox" />
                             <Label Text="2 muna" TextColor="#333" FontSize="18" VerticalOptions="Center" />
@@ -92,13 +89,24 @@
                         FontAttributes="Bold"
                         TextColor="#333" />
 
-                    <VerticalStackLayout Spacing="5">
+                    <VerticalStackLayout x:Name="PreparationSteps" Spacing="5">
                         <Label Text="1. Prae munad vastavalt oma eelistustele." TextColor="#333" FontSize="18" />
                         <Label Text="2. Röstige leib ja määrige avokaadopüree peale." TextColor="#333" FontSize="18" />
                         <Label Text="3. Maitsesta soola ja pipraga." TextColor="#333" FontSize="18" />
                     </VerticalStackLayout>
                 </VerticalStackLayout>
             </Frame>
+
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" Margin="10">
+                <Button Text="Uus Retsept" 
+                        Clicked="UusRetseptike" 
+                        BackgroundColor="#FFEDC1"
+                        TextColor="#333" 
+                        WidthRequest="180" 
+                        HeightRequest="80" 
+                        CornerRadius="30"
+                        FontSize="20"/>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
