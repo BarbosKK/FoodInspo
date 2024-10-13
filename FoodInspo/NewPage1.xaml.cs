@@ -1,55 +1,33 @@
-namespace FoodInspo;
-
-public partial class NewPage1 : ContentPage
+namespace FoodInspo
 {
-    public NewPage1()
+    public partial class NewPage1 : ContentPage
     {
-        InitializeComponent();
-    }
-    
-    async void OnCounterClicked_2(System.Object sender, System.EventArgs e)
-    {
-        // Viib tagasi alguse vaatele
-        await Navigation.PushAsync(new MainPage());
-    }
-
-    private async void OnImageButtonClicked(object sender, EventArgs e)
-    {
-
-        // nupu ja pildi seos
-        var button = sender as ImageButton;
-
-        if (button != null && button.Source is FileImageSource fileImageSource)
+        public NewPage1()
         {
-            // Kontrollime faili nime
-            switch (fileImageSource.File)
-            {
-                case "main_page.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
+            InitializeComponent();
+        }
 
-                case "main_page1.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                case "main_page2.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                case "main_page3.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                case "main_page4.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                case "main_page5.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                case "main_page6.png":
-                    await Navigation.PushAsync(new Hommikusook());
-                    break;
-                default:
-                        DisplayAlert("Nupp", "Suphoe", "OK");
+        async void OnCounterClicked_2(System.Object sender, System.EventArgs e)
+        {
+            Application.Current.MainPage = new MainPage();
+        }
+
+        private async void OnImageButtonClicked(object sender, EventArgs e)
+        {
+            var button = sender as ImageButton;
+
+            if (button != null && button.Source is FileImageSource fileImageSource)
+            {
+                switch (fileImageSource.File)
+                {
+                    case "hommik.png":
+                        await Navigation.PushAsync(new Hommikusook());
+                        break;
+                    default:
+                        await DisplayAlert("Nupp", "Suphoe", "OK");
                         break;
                 }
             }
         }
     }
+}

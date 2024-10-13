@@ -2,21 +2,103 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodInspo.Hommikusook"
-             Title="Hommikusook">
-    <VerticalStackLayout>
-        
-        <Label 
-            Text="Hommikusöök"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
-        
-         <Button x:Name="CounterBtn_2"
-         Text="Mine tagasi!" 
-         SemanticProperties.Hint="Tagasi main page"
-         Clicked="OnCounterClicked_2"
-         HorizontalOptions="Center" />
-        
-        
-    </VerticalStackLayout>
+             Title="Hommikusöök">
+
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FFE8B3" Offset="0.0" />
+            <GradientStop Color="#FFEDC1" Offset="0.3" />
+            <GradientStop Color="#FFD59A" Offset="0.5" />
+            <GradientStop Color="#FFB84D" Offset="0.7" />
+            <GradientStop Color="#FFA500" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="30">
+
+            <ImageButton x:Name="CounterBtn_2"
+                         Source="nool.png"
+                         SemanticProperties.Hint="Tagasi main page"
+                         Clicked="OnCounterClicked_2"
+                         BackgroundColor="Transparent"
+                         WidthRequest="20"
+                         HeightRequest="20"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Start"
+                         Margin="10"/>
+
+            <Frame
+                BackgroundColor="#E6FFFFFF"
+                Opacity="0.8"
+                CornerRadius="15"
+                Padding="20"
+                Margin="10"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="350"
+                BorderColor="Transparent">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label 
+                        Text="Hommikusöök"
+                        FontSize="35"
+                        FontAttributes="Bold"
+                        TextColor="#333"
+                        HorizontalOptions="Center" />
+
+                    <Label Text="" HeightRequest="20" />
+
+                    <Label 
+                        Text="Valmistusaeg:"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#333" />
+
+                    <Label 
+                        Text="20 minutit"
+                        TextColor="#333"
+                        FontSize="18" />
+
+                    <Label 
+                        Text="Koostisosad:"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#333" />
+
+                    <VerticalStackLayout Spacing="5">
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="Ingredient1CheckBox" />
+                            <Label Text="2 muna" TextColor="#333" FontSize="18" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="Ingredient2CheckBox" />
+                            <Label Text="1 viil täisteraleiba" TextColor="#333" FontSize="18" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="Ingredient3CheckBox" />
+                            <Label Text="1 avokaado" TextColor="#333" FontSize="18" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="Ingredient4CheckBox" />
+                            <Label Text="Näpuotsatäis soola ja pipart" TextColor="#333" FontSize="18" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                    <Label 
+                        Text="Valmistamine:"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="#333" />
+
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="1. Prae munad vastavalt oma eelistustele." TextColor="#333" FontSize="18" />
+                        <Label Text="2. Röstige leib ja määrige avokaadopüree peale." TextColor="#333" FontSize="18" />
+                        <Label Text="3. Maitsesta soola ja pipraga." TextColor="#333" FontSize="18" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

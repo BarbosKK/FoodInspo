@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FoodInspo.MainPage"
-             BackgroundColor="#B3CF99">
+             x:Class="FoodInspo.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#B3CF99" Offset="0.0" />
+            <!-- Valge-roheline -->
+            <GradientStop Color="#A8D9A4" Offset="0.3" />
+            <!-- Heledam roheline -->
+            <GradientStop Color="#75975e" Offset="0.5" />
+            <!-- Tumedam roheline -->
+            <GradientStop Color="#537A4D" Offset="0.7" />
+            <!-- Tumeroheline -->
+            <GradientStop Color="#3C582F" Offset="1.0" />
+            <!-- Tumepruun roheline -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <Grid>
         <Image
