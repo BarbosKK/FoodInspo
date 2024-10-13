@@ -1,15 +1,32 @@
+using Microsoft.Maui.Controls;
+using System;
+using System.Threading.Tasks;
+
 namespace FoodInspo
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+            AnimateElements();
         }
 
-        async void OnCounterClicked(System.Object sender, System.EventArgs e)
-        => Application.Current.MainPage = new NavigationPage(new NewPage1());
+        private async void AnimateElements()
+        {
+
+            await Task.Delay(500);
+
+
+            await LogoImage.FadeTo(1, 2000);
+
+
+            await CounterBtn.FadeTo(1, 1000);
+        }
+        private async void OnCounterClicked(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new NewPage1());
+        }
     }
 }

@@ -6,25 +6,22 @@
     <ContentPage.Background>
         <LinearGradientBrush>
             <GradientStop Color="#B3CF99" Offset="0.0" />
-            <!-- Valge-roheline -->
             <GradientStop Color="#A8D9A4" Offset="0.3" />
-            <!-- Heledam roheline -->
             <GradientStop Color="#75975e" Offset="0.5" />
-            <!-- Tumedam roheline -->
             <GradientStop Color="#537A4D" Offset="0.7" />
-            <!-- Tumeroheline -->
             <GradientStop Color="#3C582F" Offset="1.0" />
-            <!-- Tumepruun roheline -->
         </LinearGradientBrush>
     </ContentPage.Background>
 
     <Grid>
         <Image
+            x:Name="LogoImage"
             Source="logo.png"
             Aspect="AspectFill"
             HorizontalOptions="Center"
             VerticalOptions="FillAndExpand"
-            Margin="-110,0,0,0"/>
+            Margin="-110,0,0,0"
+            Opacity="0" />
 
         <Button
             x:Name="CounterBtn"
@@ -38,8 +35,7 @@
             HorizontalOptions="Center"
             VerticalOptions="End"
             Clicked="OnCounterClicked"
-            CornerRadius="30">
-        </Button>
+            CornerRadius="30"
+            Opacity="0" />
     </Grid>
-
 </ContentPage>
