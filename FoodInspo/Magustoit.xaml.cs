@@ -2,13 +2,13 @@ using Microsoft.Maui.Controls;
 
 namespace FoodInspo;
 
-public partial class Oode : ContentPage
+public partial class Magustoit : ContentPage
 {
     private List<Recipe> recipes;
     private Random random;
     private int currentRecipeIndex;
 
-    public Oode()
+    public Magustoit()
     {
         InitializeComponent();
         random = new Random();
@@ -17,42 +17,42 @@ public partial class Oode : ContentPage
         DisplayRecipe(currentRecipeIndex);
     }
 
-    // Initialize the list of dinner recipes with their details
+    // Initialize the list of dessert recipes with their details
     private void InitializeRecipes()
     {
         recipes = new List<Recipe>
         {
             new Recipe
             {
-                Title = "Grillitud lõhe köögiviljadega",
-                PreparationTime = "30 minutit",
-                Ingredients = new List<string> { "Lõhefilee", "Spargel", "Paprika", "Oliiviõli", "Sool ja pipar" },
-                PreparationSteps = new List<string> { "Maitsesta lõhe soola ja pipraga.", "Grilli lõhe ja köögiviljad.", "Serveeri kuumalt." },
-                ImageSource = "grillitud_lohe.jpg"
+                Title = "Šokolaadi mousse",
+                PreparationTime = "20 minutit",
+                Ingredients = new List<string> { "Šokolaad", "Vahukoor", "Suhkur", "Munad" },
+                PreparationSteps = new List<string> { "Sulata šokolaad ja sega munadega.", "Vahusta koor ja sega šokolaadi hulka.", "Jahuta enne serveerimist." },
+                ImageSource = "sokolaadi_mousse.jpg"
             },
             new Recipe
             {
-                Title = "Veiselihapada",
+                Title = "Marjapavlova",
                 PreparationTime = "1 tund",
-                Ingredients = new List<string> { "Veiseliha", "Kartul", "Porgand", "Sibul", "Puljong" },
-                PreparationSteps = new List<string> { "Pruunista veiseliha.", "Lisa tükeldatud köögiviljad ja puljong.", "Küpseta ahjus 1 tund." },
-                ImageSource = "veisepada.jpg"
+                Ingredients = new List<string> { "Munavalged", "Suhkur", "Vanilje", "Marjad" },
+                PreparationSteps = new List<string> { "Vahusta munavalged ja lisa suhkur.", "Küpseta ahjus kuni krõbe.", "Kaunista marjade ja vaniljekreemiga." },
+                ImageSource = "marjapavlova.jpg"
             },
             new Recipe
             {
-                Title = "Ahjukana ja kartul",
+                Title = "Pannkoogid moosiga",
+                PreparationTime = "30 minutit",
+                Ingredients = new List<string> { "Jahu", "Piim", "Muna", "Moos" },
+                PreparationSteps = new List<string> { "Sega jahu, piim ja muna.", "Prae tainas pannil kuldseks.", "Serveeri koos moosiga." },
+                ImageSource = "pannkoogid.jpg"
+            },
+            new Recipe
+            {
+                Title = "Õunakook",
                 PreparationTime = "45 minutit",
-                Ingredients = new List<string> { "Kanakoivad", "Kartul", "Oliiviõli", "Küüslauk", "Rosmariin" },
-                PreparationSteps = new List<string> { "Maitsesta kana ja kartulid.", "Küpseta ahjus 45 minutit.", "Serveeri värske rosmariiniga." },
-                ImageSource = "ahjukana.jpg"
-            },
-            new Recipe
-            {
-                Title = "Risotto seentega",
-                PreparationTime = "35 minutit",
-                Ingredients = new List<string> { "Risottoriis", "Seen", "Puljong", "Parmesan", "Või" },
-                PreparationSteps = new List<string> { "Prae seened võiga.", "Lisa riis ja puljong vähehaaval.", "Lisa parmesan ja sega kuni kreemjas." },
-                ImageSource = "seenerisotto.jpg"
+                Ingredients = new List<string> { "Õunad", "Jahu", "Või", "Suhkur", "Kaneel" },
+                PreparationSteps = new List<string> { "Valmista tainas ja kata õuntega.", "Maitsesta kaneeliga ja küpseta ahjus.", "Serveeri soojalt või külmalt." },
+                ImageSource = "ounakook.jpg"
             }
         };
     }

@@ -2,13 +2,13 @@ using Microsoft.Maui.Controls;
 
 namespace FoodInspo;
 
-public partial class Oode : ContentPage
+public partial class Joogid : ContentPage
 {
     private List<Recipe> recipes;
     private Random random;
     private int currentRecipeIndex;
 
-    public Oode()
+    public Joogid()
     {
         InitializeComponent();
         random = new Random();
@@ -17,42 +17,42 @@ public partial class Oode : ContentPage
         DisplayRecipe(currentRecipeIndex);
     }
 
-    // Initialize the list of dinner recipes with their details
+    // Initialize the list of drink recipes with their details
     private void InitializeRecipes()
     {
         recipes = new List<Recipe>
         {
             new Recipe
             {
-                Title = "Grillitud lõhe köögiviljadega",
-                PreparationTime = "30 minutit",
-                Ingredients = new List<string> { "Lõhefilee", "Spargel", "Paprika", "Oliiviõli", "Sool ja pipar" },
-                PreparationSteps = new List<string> { "Maitsesta lõhe soola ja pipraga.", "Grilli lõhe ja köögiviljad.", "Serveeri kuumalt." },
-                ImageSource = "grillitud_lohe.jpg"
+                Title = "Värske mahl",
+                PreparationTime = "5 minutit",
+                Ingredients = new List<string> { "Apelsin", "Sidrun", "Mesi", "Vesi" },
+                PreparationSteps = new List<string> { "Pressi apelsini ja sidruni mahl välja.", "Lisa mesi ja sega veega.", "Serveeri koheselt." },
+                ImageSource = "varske_mahl.jpg"
             },
             new Recipe
             {
-                Title = "Veiselihapada",
-                PreparationTime = "1 tund",
-                Ingredients = new List<string> { "Veiseliha", "Kartul", "Porgand", "Sibul", "Puljong" },
-                PreparationSteps = new List<string> { "Pruunista veiseliha.", "Lisa tükeldatud köögiviljad ja puljong.", "Küpseta ahjus 1 tund." },
-                ImageSource = "veisepada.jpg"
+                Title = "Marja smuuti",
+                PreparationTime = "10 minutit",
+                Ingredients = new List<string> { "Mustikad", "Maasikad", "Jogurt", "Meelepärane piim" },
+                PreparationSteps = new List<string> { "Lisa kõik koostisosad blenderisse.", "Blenderda kuni ühtlane.", "Serveeri klaasis." },
+                ImageSource = "marja_smuuti.jpg"
             },
             new Recipe
             {
-                Title = "Ahjukana ja kartul",
-                PreparationTime = "45 minutit",
-                Ingredients = new List<string> { "Kanakoivad", "Kartul", "Oliiviõli", "Küüslauk", "Rosmariin" },
-                PreparationSteps = new List<string> { "Maitsesta kana ja kartulid.", "Küpseta ahjus 45 minutit.", "Serveeri värske rosmariiniga." },
-                ImageSource = "ahjukana.jpg"
+                Title = "Roheline tee sidruniga",
+                PreparationTime = "5 minutit",
+                Ingredients = new List<string> { "Roheline tee", "Sidrun", "Mesi" },
+                PreparationSteps = new List<string> { "Valmista roheline tee.", "Lisa sidruniviil ja mesi maitseks.", "Serveeri kuumalt." },
+                ImageSource = "roheline_tee.jpg"
             },
             new Recipe
             {
-                Title = "Risotto seentega",
-                PreparationTime = "35 minutit",
-                Ingredients = new List<string> { "Risottoriis", "Seen", "Puljong", "Parmesan", "Või" },
-                PreparationSteps = new List<string> { "Prae seened võiga.", "Lisa riis ja puljong vähehaaval.", "Lisa parmesan ja sega kuni kreemjas." },
-                ImageSource = "seenerisotto.jpg"
+                Title = "Külm kohv",
+                PreparationTime = "15 minutit",
+                Ingredients = new List<string> { "Kohv", "Piim", "Jääkuubikud", "Suhkur" },
+                PreparationSteps = new List<string> { "Valmista kohv ja lase jahtuda.", "Lisa jääkuubikud ja piim.", "Serveeri külmalt." },
+                ImageSource = "kulm_kohv.jpg"
             }
         };
     }
