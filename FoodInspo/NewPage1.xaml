@@ -14,103 +14,106 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <VerticalStackLayout Padding="10">
+    <!-- Added ScrollView here -->
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
 
-        <ImageButton x:Name="CounterBtn_2"
-                     Source="nool.png"
-                     SemanticProperties.Hint="Tagasi main page"
-                     Clicked="OnCounterClicked_2"
-                     BackgroundColor="Transparent"
-                     WidthRequest="20"
-                     HeightRequest="20"
-                     HorizontalOptions="Start"
-                     VerticalOptions="Start"
-                     Margin="10"/>
+            <ImageButton x:Name="CounterBtn_2"
+                         Source="nool.png"
+                         SemanticProperties.Hint="Tagasi main page"
+                         Clicked="OnCounterClicked_2"
+                         BackgroundColor="Transparent"
+                         WidthRequest="20"
+                         HeightRequest="20"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Start"
+                         Margin="10"/>
 
-        <Label 
-            Text="Vali toidukord"
-            TextColor="White"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            FontSize="35"
-            FontAttributes="Bold"/>
+            <Label 
+                Text="Vali toidukord"
+                TextColor="White"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="35"
+                FontAttributes="Bold"/>
 
-        <Grid Margin="10" Padding="10" RowSpacing="40" ColumnSpacing="30" VerticalOptions="StartAndExpand">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+            <Grid Margin="10" Padding="10" RowSpacing="40" ColumnSpacing="30" VerticalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <!-- Row 1, Column 1: Hommikusöök -->
-            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="hommikusook.png"
-                             BackgroundColor="#BF8B6F"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked"
-                             CornerRadius="50" />
-                <Label Text="Hommikusöök" HorizontalOptions="Center" />
-            </StackLayout>
+                <!-- Row 1, Column 1: Hommikusöök -->
+                <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ImageButton Source="hommikusook.png"
+                                 BackgroundColor="#BF8B6F"
+                                 WidthRequest="100" 
+                                 HeightRequest="100" 
+                                 Clicked="OnImageButtonClicked"
+                                 CornerRadius="50" />
+                    <Label Text="Hommikusöök" HorizontalOptions="Center" />
+                </StackLayout>
 
-            <!-- Row 1, Column 2: Lõunasöök -->
-            <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="lounasook.png"
-                             BackgroundColor="#BF8B6F"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked"
-                             CornerRadius="50" />
-                <Label Text="Lõunasöök" HorizontalOptions="Center" />
-            </StackLayout>
+                <!-- Row 1, Column 2: Lõunasöök -->
+                <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ImageButton Source="lounasook.png"
+                                 BackgroundColor="#BF8B6F"
+                                 WidthRequest="100" 
+                                 HeightRequest="100" 
+                                 Clicked="OnImageButtonClicked"
+                                 CornerRadius="50" />
+                    <Label Text="Lõunasöök" HorizontalOptions="Center" />
+                </StackLayout>
 
-            <!-- Row 2, Column 1: Oode -->
-            <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="oode.png"
-                             BackgroundColor="#BF8B6F"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked"
-                             CornerRadius="50" />
-                <Label Text="Oode" HorizontalOptions="Center" />
-            </StackLayout>
+                <!-- Row 2, Column 1: Oode -->
+                <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ImageButton Source="oode.png"
+                                 BackgroundColor="#BF8B6F"
+                                 WidthRequest="100" 
+                                 HeightRequest="100" 
+                                 Clicked="OnImageButtonClicked"
+                                 CornerRadius="50" />
+                    <Label Text="Oode" HorizontalOptions="Center" />
+                </StackLayout>
 
-            <!-- Row 2, Column 2: Õhtusöök -->
-            <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="ohtusook.png"
-                             BackgroundColor="#BF8B6F"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked"
-                             CornerRadius="50" />
-                <Label Text="Õhtusöök" HorizontalOptions="Center" />
-            </StackLayout>
+                <!-- Row 2, Column 2: Õhtusöök -->
+                <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ImageButton Source="ohtusook.png"
+                                 BackgroundColor="#BF8B6F"
+                                 WidthRequest="100" 
+                                 HeightRequest="100" 
+                                 Clicked="OnImageButtonClicked"
+                                 CornerRadius="50" />
+                    <Label Text="Õhtusöök" HorizontalOptions="Center" />
+                </StackLayout>
 
-            <!-- Row 3, Column 1: Magustoit -->
-            <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="magus.png"
-                             BackgroundColor="#BF8B6F"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked"
-                             CornerRadius="50" />
-                <Label Text="Magustoit" HorizontalOptions="Center" />
-            </StackLayout>
+                <!-- Row 3, Column 1: Magustoit -->
+                <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ImageButton Source="magustoit.png"
+                                 BackgroundColor="#BF8B6F"
+                                 WidthRequest="100" 
+                                 HeightRequest="100" 
+                                 Clicked="OnImageButtonClicked"
+                                 CornerRadius="50" />
+                    <Label Text="Magustoit" HorizontalOptions="Center" />
+                </StackLayout>
 
-            <!-- Row 3, Column 2: Kokteil -->
-            <StackLayout Grid.Row="2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="cocktail.png"
-                             BackgroundColor="#BF8B6F"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked"
-                             CornerRadius="50" />
-                <Label Text="Kokteil" HorizontalOptions="Center" />
-            </StackLayout>
-        </Grid>
-    </VerticalStackLayout>
+                <!-- Row 3, Column 2: Kokteil -->
+                <StackLayout Grid.Row="2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                    <ImageButton Source="joogid.png"
+                                 BackgroundColor="#BF8B6F"
+                                 WidthRequest="100" 
+                                 HeightRequest="100" 
+                                 Clicked="OnImageButtonClicked"
+                                 CornerRadius="50" />
+                    <Label Text="Kokteil" HorizontalOptions="Center" />
+                </StackLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

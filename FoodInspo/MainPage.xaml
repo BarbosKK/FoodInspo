@@ -14,14 +14,18 @@
     </ContentPage.Background>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
         <Image
             x:Name="LogoImage"
             Source="logo.png"
-            Aspect="AspectFill"
+            Aspect="AspectFit"
             HorizontalOptions="Center"
-            VerticalOptions="FillAndExpand"
-            Margin="-110,0,0,0"
-            Opacity="0" />
+            VerticalOptions="Center"
+            Opacity="1" />
 
         <Button
             x:Name="CounterBtn"
@@ -36,6 +40,6 @@
             VerticalOptions="End"
             Clicked="OnCounterClicked"
             CornerRadius="30"
-            Opacity="0" />
+            Opacity="1" />
     </Grid>
 </ContentPage>

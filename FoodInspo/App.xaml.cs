@@ -10,14 +10,10 @@ namespace FoodInspo
 {
     public partial class App : Application
     {
-        const int WindowWidth = 540;
-        const int WindowHeight = 900;
-
         public App()
         {
             InitializeComponent();
 
-            // Windowsi akna seade
             Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (handler, view) =>
             {
 #if WINDOWS
@@ -27,12 +23,20 @@ namespace FoodInspo
                 IntPtr windowHandle = WinRT.Interop.WindowNative.GetWindowHandle(nativeWindow);
                 WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(windowHandle);
                 AppWindow appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
-                appWindow.Resize(new SizeInt32(WindowWidth, WindowHeight));
+                
+                // Seadista akna suurus
+                appWindow.Resize(new SizeInt32(540, 900));
+
+                // Seadista minimaalne ja maksimaalne akna suurus
+                appWindow.Resize(new SizeInt32(
+                    Math.Clamp(540, 400, 800),
+                    Math.Clamp(900, 600, 1200)
+                ));
 #endif
             });
 
-            // Pealehe seadistamine
             MainPage = new NavigationPage(new MainPage());
         }
     }
 }
+

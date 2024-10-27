@@ -9,6 +9,8 @@ namespace FoodInspo
         public MainPage()
         {
             InitializeComponent();
+            LogoImage.Opacity = 0; // Algne v‰‰rtus
+            CounterBtn.Opacity = 0; // Algne v‰‰rtus
             AnimateElements();
         }
 

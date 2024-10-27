@@ -35,14 +35,14 @@ namespace FoodInspo
                     case "oode.png":
                         await Navigation.PushAsync(new Oode());
                         break;
-                    case "main_page4.png":
-                        await Navigation.PushAsync(new Hommikusook());
+                    case "joogid.png":
+                        await Navigation.PushAsync(new Joogid());
                         break;
-                    case "main_page5.png":
-                        await Navigation.PushAsync(new Ohtusook());
+                    case "magustoit.png":
+                        await Navigation.PushAsync(new Magustoit());
                         break;
                     default:
-                        await DisplayAlert("Nupp", "Suphoe", "OK");
+                        await DisplayAlert("Nupp", "Vale", "OK");
                         break;
                 }
             }
