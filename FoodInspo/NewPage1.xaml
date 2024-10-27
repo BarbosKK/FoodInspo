@@ -2,21 +2,30 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoodInspo.NewPage1"
-             Title="NewPage1"
-             BackgroundColor="#B3CF99">
+             Title="NewPage1">
+
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#B3CF99" Offset="0.0" />
+            <GradientStop Color="#A8D9A4" Offset="0.3" />
+            <GradientStop Color="#75975e" Offset="0.5" />
+            <GradientStop Color="#537A4D" Offset="0.7" />
+            <GradientStop Color="#3C582F" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <VerticalStackLayout Padding="10">
 
         <ImageButton x:Name="CounterBtn_2"
-             Source="nool.png"
-             SemanticProperties.Hint="Tagasi main page"
-             Clicked="OnCounterClicked_2"
-             BackgroundColor="Transparent"
-             WidthRequest="20"
-             HeightRequest="20"
-             HorizontalOptions="Start"
-             VerticalOptions="Start"
-             Margin="10"/>
+                     Source="nool.png"
+                     SemanticProperties.Hint="Tagasi main page"
+                     Clicked="OnCounterClicked_2"
+                     BackgroundColor="Transparent"
+                     WidthRequest="20"
+                     HeightRequest="20"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Start"
+                     Margin="10"/>
 
         <Label 
             Text="Vali toidukord"
@@ -37,15 +46,10 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-<<<<<<< HEAD
-            <!-- ESIMENE RIDA -->
-            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center">
-                <ImageButton Source="hommikusook.png"
-=======
+            <!-- Row 1, Column 1: Hommikusöök -->
             <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="hommik.png"
+                <ImageButton Source="hommikusook.png"
                              BackgroundColor="#BF8B6F"
->>>>>>> origin/Lauren
                              WidthRequest="100" 
                              HeightRequest="100" 
                              Clicked="OnImageButtonClicked"
@@ -53,16 +57,9 @@
                 <Label Text="Hommikusöök" HorizontalOptions="Center" />
             </StackLayout>
 
-<<<<<<< HEAD
-            <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center">
-                <ImageButton Source="lounasook.png"
-                             WidthRequest="100" 
-                             HeightRequest="100" 
-                             Clicked="OnImageButtonClicked" />
-                <Label Text="Lounasook" HorizontalOptions="Center" />
-=======
+            <!-- Row 1, Column 2: Lõunasöök -->
             <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="sooklogo.png"
+                <ImageButton Source="lounasook.png"
                              BackgroundColor="#BF8B6F"
                              WidthRequest="100" 
                              HeightRequest="100" 
@@ -71,8 +68,9 @@
                 <Label Text="Lõunasöök" HorizontalOptions="Center" />
             </StackLayout>
 
+            <!-- Row 2, Column 1: Oode -->
             <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="toitlogo.png"
+                <ImageButton Source="oode.png"
                              BackgroundColor="#BF8B6F"
                              WidthRequest="100" 
                              HeightRequest="100" 
@@ -81,17 +79,18 @@
                 <Label Text="Oode" HorizontalOptions="Center" />
             </StackLayout>
 
+            <!-- Row 2, Column 2: Õhtusöök -->
             <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <ImageButton Source="nomnom.png"
+                <ImageButton Source="ohtusook.png"
                              BackgroundColor="#BF8B6F"
                              WidthRequest="100" 
                              HeightRequest="100" 
                              Clicked="OnImageButtonClicked"
                              CornerRadius="50" />
                 <Label Text="Õhtusöök" HorizontalOptions="Center" />
->>>>>>> origin/Lauren
             </StackLayout>
 
+            <!-- Row 3, Column 1: Magustoit -->
             <StackLayout Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                 <ImageButton Source="magus.png"
                              BackgroundColor="#BF8B6F"
@@ -102,6 +101,7 @@
                 <Label Text="Magustoit" HorizontalOptions="Center" />
             </StackLayout>
 
+            <!-- Row 3, Column 2: Kokteil -->
             <StackLayout Grid.Row="2" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                 <ImageButton Source="cocktail.png"
                              BackgroundColor="#BF8B6F"
