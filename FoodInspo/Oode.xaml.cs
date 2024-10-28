@@ -2,13 +2,13 @@ using Microsoft.Maui.Controls;
 
 namespace FoodInspo;
 
-public partial class Hommikusook : ContentPage
+public partial class Oode : ContentPage
 {
     private List<Recipe> recipes;
     private Random random;
     private int currentRecipeIndex;
 
-    public Hommikusook()
+    public Oode()
     {
         InitializeComponent();
         random = new Random();
@@ -17,42 +17,42 @@ public partial class Hommikusook : ContentPage
         DisplayRecipe(currentRecipeIndex);
     }
 
-    // Initialize the list of recipes with their details
+    // Initialize the list of dinner recipes with their details
     private void InitializeRecipes()
     {
         recipes = new List<Recipe>
         {
             new Recipe
             {
-                Title = "Kaerahelbepuder marjadega",
-                PreparationTime = "10 minutit",
-                Ingredients = new List<string> { "Kaerahelbed", "Marjad", "Piim" },
-                PreparationSteps = new List<string> { "Keeda kaerahelbed piimaga.", "Lisa peale värsked marjad." },
-                ImageSource = "kaerahelbepuder.jpg"
+                Title = "Grillitud lõhe köögiviljadega",
+                PreparationTime = "30 minutit",
+                Ingredients = new List<string> { "Lõhefilee", "Spargel", "Paprika", "Oliiviõli", "Sool ja pipar" },
+                PreparationSteps = new List<string> { "Maitsesta lõhe soola ja pipraga.", "Grilli lõhe ja köögiviljad.", "Serveeri kuumalt." },
+                ImageSource = "grillitud_lohe.jpg"
             },
             new Recipe
             {
-                Title = "Omlett juustu ja singiga",
-                PreparationTime = "15 minutit",
-                Ingredients = new List<string> { "Munad", "Juust", "Sink" },
-                PreparationSteps = new List<string> { "Klopi munad.", "Lisa juust ja sink.", "Prae pannil kuldpruuniks." },
-                ImageSource = "omlett.jpg"
+                Title = "Veiselihapada",
+                PreparationTime = "1 tund",
+                Ingredients = new List<string> { "Veiseliha", "Kartul", "Porgand", "Sibul", "Puljong" },
+                PreparationSteps = new List<string> { "Pruunista veiseliha.", "Lisa tükeldatud köögiviljad ja puljong.", "Küpseta ahjus 1 tund." },
+                ImageSource = "veisepada.jpg"
             },
             new Recipe
             {
-                Title = "Tortilla munade ja avokaadoga",
-                PreparationTime = "20 minutit",
-                Ingredients = new List<string> { "Tortilla", "Munad", "Avokaado", "Juust" },
-                PreparationSteps = new List<string> { "Prae munad.", "Tükelda avokaado.", "Pane kõik koostisosad tortilla sisse." },
-                ImageSource = "tortilla.jpg"
+                Title = "Ahjukana ja kartul",
+                PreparationTime = "45 minutit",
+                Ingredients = new List<string> { "Kanakoivad", "Kartul", "Oliiviõli", "Küüslauk", "Rosmariin" },
+                PreparationSteps = new List<string> { "Maitsesta kana ja kartulid.", "Küpseta ahjus 45 minutit.", "Serveeri värske rosmariiniga." },
+                ImageSource = "ahjukana.jpg"
             },
             new Recipe
             {
-                Title = "Avokaado sai",
-                PreparationTime = "20 minutit",
-                Ingredients = new List<string> { "2 muna", "1 viil täisteraleiba", "1 avokaado", "Näpuotsatäis soola ja pipart" },
-                PreparationSteps = new List<string> { "Prae munad vastavalt oma eelistustele.", "Röstige leib ja määrige avokaadopüree peale.", "Maitsesta soola ja pipraga." },
-                ImageSource = "avokaado_sai.jpg"
+                Title = "Risotto seentega",
+                PreparationTime = "35 minutit",
+                Ingredients = new List<string> { "Risottoriis", "Seen", "Puljong", "Parmesan", "Või" },
+                PreparationSteps = new List<string> { "Prae seened võiga.", "Lisa riis ja puljong vähehaaval.", "Lisa parmesan ja sega kuni kreemjas." },
+                ImageSource = "seenerisotto.jpg"
             }
         };
     }
@@ -66,7 +66,6 @@ public partial class Hommikusook : ContentPage
         PreparationTimeLabel.Text = "Valmistusaeg:";
         PreparationTimeValueLabel.Text = selectedRecipe.PreparationTime;
         RecipeImage.Source = selectedRecipe.ImageSource;
-
 
         IngredientsList.Children.Clear();
         foreach (var ingredient in selectedRecipe.Ingredients)
@@ -103,14 +102,4 @@ public partial class Hommikusook : ContentPage
     {
         await Navigation.PushAsync(new NewPage1());
     }
-}
-
-// Recipe class to hold recipe details
-public class Recipe
-{
-    public string Title { get; set; }
-    public string PreparationTime { get; set; }
-    public List<string> Ingredients { get; set; }
-    public List<string> PreparationSteps { get; set; }
-    public string ImageSource { get; set; }
 }

@@ -2,13 +2,13 @@ using Microsoft.Maui.Controls;
 
 namespace FoodInspo;
 
-public partial class Hommikusook : ContentPage
+public partial class Lounasook : ContentPage
 {
     private List<Recipe> recipes;
     private Random random;
     private int currentRecipeIndex;
 
-    public Hommikusook()
+    public Lounasook()
     {
         InitializeComponent();
         random = new Random();
@@ -17,42 +17,42 @@ public partial class Hommikusook : ContentPage
         DisplayRecipe(currentRecipeIndex);
     }
 
-    // Initialize the list of recipes with their details
+    // Initialize the list of lunch recipes with their details
     private void InitializeRecipes()
     {
         recipes = new List<Recipe>
         {
             new Recipe
             {
-                Title = "Kaerahelbepuder marjadega",
-                PreparationTime = "10 minutit",
-                Ingredients = new List<string> { "Kaerahelbed", "Marjad", "Piim" },
-                PreparationSteps = new List<string> { "Keeda kaerahelbed piimaga.", "Lisa peale värsked marjad." },
-                ImageSource = "kaerahelbepuder.jpg"
+                Title = "Kanarind riisiga",
+                PreparationTime = "30 minutit",
+                Ingredients = new List<string> { "Kanarind", "Riis", "Paprika", "Sojakaste" },
+                PreparationSteps = new List<string> { "Keeda riis vastavalt juhendile.", "Grilli kanarind ja lisa paprika.", "Maitsesta sojakastmega." },
+                ImageSource = "kanarind_riisiga.jpg"
             },
             new Recipe
             {
-                Title = "Omlett juustu ja singiga",
+                Title = "Ceasari salat",
                 PreparationTime = "15 minutit",
-                Ingredients = new List<string> { "Munad", "Juust", "Sink" },
-                PreparationSteps = new List<string> { "Klopi munad.", "Lisa juust ja sink.", "Prae pannil kuldpruuniks." },
-                ImageSource = "omlett.jpg"
+                Ingredients = new List<string> { "Rooma salat", "Kana", "Krutoonid", "Parmesan" },
+                PreparationSteps = new List<string> { "Tükelda salat ja kana.", "Lisa krutoonid ja parmesan.", "Serveeri kohe." },
+                ImageSource = "ceasari_salat.jpg"
             },
             new Recipe
             {
-                Title = "Tortilla munade ja avokaadoga",
-                PreparationTime = "20 minutit",
-                Ingredients = new List<string> { "Tortilla", "Munad", "Avokaado", "Juust" },
-                PreparationSteps = new List<string> { "Prae munad.", "Tükelda avokaado.", "Pane kõik koostisosad tortilla sisse." },
-                ImageSource = "tortilla.jpg"
+                Title = "Pasta bolognese",
+                PreparationTime = "25 minutit",
+                Ingredients = new List<string> { "Pasta", "Hakkliha", "Tomatikaste", "Sibul", "Küüslauk" },
+                PreparationSteps = new List<string> { "Keeda pasta.", "Küpseta hakkliha sibula ja küüslauguga.", "Lisa tomatikaste ja serveeri pastaga." },
+                ImageSource = "pasta_bolognese.jpg"
             },
             new Recipe
             {
-                Title = "Avokaado sai",
-                PreparationTime = "20 minutit",
-                Ingredients = new List<string> { "2 muna", "1 viil täisteraleiba", "1 avokaado", "Näpuotsatäis soola ja pipart" },
-                PreparationSteps = new List<string> { "Prae munad vastavalt oma eelistustele.", "Röstige leib ja määrige avokaadopüree peale.", "Maitsesta soola ja pipraga." },
-                ImageSource = "avokaado_sai.jpg"
+                Title = "Köögiviljasupp",
+                PreparationTime = "40 minutit",
+                Ingredients = new List<string> { "Porgand", "Kartul", "Seller", "Puljong" },
+                PreparationSteps = new List<string> { "Tükelda köögiviljad ja keeda puljongis.", "Lisa maitseained ja keeda kuni valmis.", "Serveeri kuumalt." },
+                ImageSource = "koogiviljasupp.jpg"
             }
         };
     }
@@ -66,7 +66,6 @@ public partial class Hommikusook : ContentPage
         PreparationTimeLabel.Text = "Valmistusaeg:";
         PreparationTimeValueLabel.Text = selectedRecipe.PreparationTime;
         RecipeImage.Source = selectedRecipe.ImageSource;
-
 
         IngredientsList.Children.Clear();
         foreach (var ingredient in selectedRecipe.Ingredients)
@@ -103,14 +102,4 @@ public partial class Hommikusook : ContentPage
     {
         await Navigation.PushAsync(new NewPage1());
     }
-}
-
-// Recipe class to hold recipe details
-public class Recipe
-{
-    public string Title { get; set; }
-    public string PreparationTime { get; set; }
-    public List<string> Ingredients { get; set; }
-    public List<string> PreparationSteps { get; set; }
-    public string ImageSource { get; set; }
 }
