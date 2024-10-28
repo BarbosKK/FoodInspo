@@ -6,7 +6,6 @@
 
     <ContentPage.Background>
         <LinearGradientBrush>
-            <GradientStop Color="#FFE8B3" Offset="0.0" />
             <GradientStop Color="#FFEDC1" Offset="0.3" />
             <GradientStop Color="#FFD59A" Offset="0.5" />
             <GradientStop Color="#FFB84D" Offset="0.7" />
