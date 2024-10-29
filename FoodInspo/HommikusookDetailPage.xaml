@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodInspo.HommikusookDetailPage"
+             Title="Hommikusöögi idee">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+            <Label x:Name="RecipeTitleLabel" 
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="DarkGreen"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Valmistusaeg:"
+                   FontSize="20"
+                   FontAttributes="Bold" />
+
+            <Label x:Name="PreparationTimeValueLabel" 
+                   FontSize="20"
+                   TextColor="DarkSlateGray" />
+
+            <Label Text="Koostisosad:"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,10" />
+
+            <VerticalStackLayout x:Name="IngredientsList" />
+
+            <Label Text="Valmistamisjuhised:"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,10" />
+
+            <VerticalStackLayout x:Name="PreparationSteps" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

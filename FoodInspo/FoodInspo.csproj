@@ -67,11 +67,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\kaerahelbepuder.jpg" />
 	  <None Remove="Resources\Images\main_page2.png" />
 	  <None Remove="Resources\Images\main_page3.png" />
 	  <None Remove="Resources\Images\main_page4.png" />
 	  <None Remove="Resources\Images\main_page5.png" />
 	  <None Remove="Resources\Images\main_page6.png" />
+	  <None Remove="Resources\Images\omlett.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -93,13 +95,7 @@
 	  <MauiXaml Update="Hommikusook.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Joogid.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Lounasook.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Magustoit.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="NewPage1.xaml">

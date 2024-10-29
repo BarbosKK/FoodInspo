@@ -32,7 +32,7 @@ public partial class Lounasook : ContentPage
             },
             new Recipe
             {
-                Title = "Ceasari salat",
+                Title = "Caesari salat",
                 PreparationTime = "15 minutit",
                 Ingredients = new List<string> { "Rooma salat", "Kana", "Krutoonid", "Parmesan" },
                 PreparationSteps = new List<string> { "Tükelda salat ja kana.", "Lisa krutoonid ja parmesan.", "Serveeri kohe." },

@@ -21,41 +21,42 @@ public partial class Oode : ContentPage
     private void InitializeRecipes()
     {
         recipes = new List<Recipe>
+    {
+        new Recipe
         {
-            new Recipe
-            {
-                Title = "Grillitud lõhe köögiviljadega",
-                PreparationTime = "30 minutit",
-                Ingredients = new List<string> { "Lõhefilee", "Spargel", "Paprika", "Oliiviõli", "Sool ja pipar" },
-                PreparationSteps = new List<string> { "Maitsesta lõhe soola ja pipraga.", "Grilli lõhe ja köögiviljad.", "Serveeri kuumalt." },
-                ImageSource = "grillitud_lohe.jpg"
-            },
-            new Recipe
-            {
-                Title = "Veiselihapada",
-                PreparationTime = "1 tund",
-                Ingredients = new List<string> { "Veiseliha", "Kartul", "Porgand", "Sibul", "Puljong" },
-                PreparationSteps = new List<string> { "Pruunista veiseliha.", "Lisa tükeldatud köögiviljad ja puljong.", "Küpseta ahjus 1 tund." },
-                ImageSource = "veisepada.jpg"
-            },
-            new Recipe
-            {
-                Title = "Ahjukana ja kartul",
-                PreparationTime = "45 minutit",
-                Ingredients = new List<string> { "Kanakoivad", "Kartul", "Oliiviõli", "Küüslauk", "Rosmariin" },
-                PreparationSteps = new List<string> { "Maitsesta kana ja kartulid.", "Küpseta ahjus 45 minutit.", "Serveeri värske rosmariiniga." },
-                ImageSource = "ahjukana.jpg"
-            },
-            new Recipe
-            {
-                Title = "Risotto seentega",
-                PreparationTime = "35 minutit",
-                Ingredients = new List<string> { "Risottoriis", "Seen", "Puljong", "Parmesan", "Või" },
-                PreparationSteps = new List<string> { "Prae seened võiga.", "Lisa riis ja puljong vähehaaval.", "Lisa parmesan ja sega kuni kreemjas." },
-                ImageSource = "seenerisotto.jpg"
-            }
-        };
+            Title = "Hummus ja köögiviljapulgad",
+            PreparationTime = "10 minutit",
+            Ingredients = new List<string> { "Hummus", "Porgandipulgad", "Kurgiviilud", "Paprikaribad" },
+            PreparationSteps = new List<string> { "Aseta hummus kaussi.", "Serveeri koos köögiviljapulkadega." },
+            ImageSource = "hummus_koogiviljadega.jpg"
+        },
+        new Recipe
+        {
+            Title = "Jogurt ja marjad",
+            PreparationTime = "5 minutit",
+            Ingredients = new List<string> { "Kreeka jogurt", "Mustikad", "Vaarikad", "Mesi", "Chia seemned" },
+            PreparationSteps = new List<string> { "Sega kreeka jogurt marjade ja meega.", "Kaunista chia seemnetega." },
+            ImageSource = "jogurt_marjadega.jpg"
+        },
+        new Recipe
+        {
+            Title = "Mandlivõi ja õunaviilud",
+            PreparationTime = "5 minutit",
+            Ingredients = new List<string> { "Õun", "Mandlivõi", "Kaneel" },
+            PreparationSteps = new List<string> { "Viiluta õunad.", "Määri õunaviiludele mandlivõid.", "Puista peale kaneeli." },
+            ImageSource = "mandlivoi_ounad.jpg"
+        },
+        new Recipe
+        {
+            Title = "Kreeka pähklid ja kuivatatud puuviljad",
+            PreparationTime = "5 minutit",
+            Ingredients = new List<string> { "Kreeka pähklid", "Kuivatatud jõhvikad", "Aprikoosid", "Datlid" },
+            PreparationSteps = new List<string> { "Kombineeri kausis erinevad pähklid ja kuivatatud puuviljad." },
+            ImageSource = "pahklid_puuviljad.jpg"
+        }
+    };
     }
+
 
     // Display the current recipe's details
     private void DisplayRecipe(int index)
